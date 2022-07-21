@@ -10,7 +10,7 @@
     if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/assets/js/service-worker.js');
 }
-    fetch("./motd.json")
+    fetch("http://api.stroked.me/motd.json")
 .then( response => response.json() )
 .then( data => updateMotd(data) )
 .catch( error => motdError(error) )
